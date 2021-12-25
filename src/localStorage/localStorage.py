@@ -70,7 +70,9 @@ class LocalStorage:
 
         """
         sql = f"INSERT INTO {tableName}(id, name) VALUES(?,?)"
-        print(sql)
+        columnValuesIndex="?,"*20+'?'
+        sql = f"INSERT INTO {tableName} VALUES({columnValuesIndex})"
+        # print(sql)
         cur = self.conn.cursor()
         if type(data)==list:
             cur.executemany(sql, data)
@@ -78,7 +80,7 @@ class LocalStorage:
             cur.execute(sql, data)
         self.conn.commit()
 
-        print('We have inserted', cur.rowcount, 'records to the table.')
+        # print('We have inserted', cur.rowcount, 'records to the table.')
 
     def fetchData(self, query):
         """

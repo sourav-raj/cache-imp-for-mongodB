@@ -6,7 +6,7 @@ Building Cache for MongoDB
 
 '''
 
-__version__ = 1.0
+__version__ = "0.0.1"
 __author__ = "Sourav Raj"
 __author_email__ = "souravraj.iitbbs@gmail.com"
 

@@ -17,10 +17,10 @@ def fieldDictFilterToSQL(val, key):
     SqlFilter=''
     if isinstance(val, dict):
         if list(val.keys())[0]=='$regex':
-            SqlFilter=f"{key} like  %{list(val.values())[0]}%"
+            SqlFilter=f"{key} like  '%{list(val.values())[0]}%'"
 
     else:
-        SqlFilter=f"{key} == {val}"
+        SqlFilter=f"{key} == '{val}'"
 
     return SqlFilter
 

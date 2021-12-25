@@ -20,7 +20,9 @@ dbfile=r'G:\bits\sem2\Systems for data analytics\Assignment\data\testsqlite.db'
 
 sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS test (
                                     id integer PRIMARY KEY,
-                                    name text NOT NULL
+                                    name text NOT NULL,
+                                    property_type text,
+                                    
                                 ); """
 
 

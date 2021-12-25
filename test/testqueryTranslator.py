@@ -30,3 +30,4 @@ for query_ in queries['queries']:
     query=query_['query']
     query=qt.mongoDbToSqlQueryParser(query)
     print(query)
+
