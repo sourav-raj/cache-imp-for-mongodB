@@ -14,7 +14,8 @@ __author_email__ = "souravraj.iitbbs@gmail.com"
 
 QUERIESFILE=r'G:\bits\sem2\Systems for data analytics\Assignment\data\queries.json'
 
-MONGODBURL="mongodb+srv://admin:Admin2021@cluster0.mjug9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"    
+
+MONGODBURL="mongodb+srv://*****:********@cluster0.mjug9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"    
 MONGODATABASENAME='sample_airbnb'
 MONGODBCOLLECTIONNAME='listingsAndReviews'
 
