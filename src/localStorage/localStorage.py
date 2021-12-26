@@ -69,9 +69,11 @@ class LocalStorage:
              None
 
         """
-        sql = f"INSERT INTO {tableName}(id, name) VALUES(?,?)"
-        columnValuesIndex="?,"*20+'?'
-        sql = f"INSERT INTO {tableName} VALUES({columnValuesIndex})"
+        # sql = f"INSERT INTO {tableName}(id, name) VALUES(?,?)"
+        # columnValuesIndex="?,"*20+'?'
+        # sql = f"INSERT INTO {tableName} VALUES({columnValuesIndex})"
+        columnValuesIndex="?,"*3+'?'
+        sql = f"INSERT or REPLACE INTO {tableName}(query, insertTime, accessTime, data) VALUES({columnValuesIndex})"
         # print(sql)
         cur = self.conn.cursor()
         if type(data)==list:
@@ -100,6 +102,44 @@ class LocalStorage:
         records = list(cur.fetchall())
         cur.close()
         return records
+        
+    def updateData(self, query):
+        """
+        parameters:
+        ----------
+            param self: instance
+            param query: str
+
+        Returns:
+        -------
+             None
+
+        """
+        # sqlite_select_query = """SELECT * from SqliteDb_developers"""
+        cur = self.conn.cursor()
+        cur.execute(query)
+        self.conn.commit()
+        # print('updated')
+        cur.close()
+    
+    def deleteData(self, query):
+        """
+        parameters:
+        ----------
+            param self: instance
+            param query: str
+
+        Returns:
+        -------
+             None
+
+        """
+        # sqlite_select_query = """SELECT * from SqliteDb_developers"""
+        cur = self.conn.cursor()
+        cur.execute(query)
+        self.conn.commit()
+        # print('updated')
+        cur.close()
 
 
 

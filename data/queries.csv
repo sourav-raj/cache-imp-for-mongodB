@@ -1,0 +1,22 @@
+S.No.,Query
+1,"collection.aggregate([
+                {""$match"" : {
+                                ""$or"" : [
+                                        {""name"": {""$regex"":""Beach""} },
+                                        {""property_type"":""House""}
+                                ]
+                }},
+                { ""$project"": { ""name"": 1, ""_id"": 0} }
+    ])"
+2,"collection.aggregate([
+                {
+                        ""$match"" : {
+                                        ""$or"" : [
+                                                {""property_type"":""House""}
+                                        ]
+                        },
+
+                },
+                { ""$project"": { ""name"": 1, ""_id"": 0} }
+        ])"
+3,

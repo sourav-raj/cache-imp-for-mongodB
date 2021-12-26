@@ -129,12 +129,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 =======
-logs/
-*.log
+
 *.pyc
 <<<<<<< HEAD
 >>>>>>> 0ab40bd (add .gitignore file)
 =======
 src/app.py
 >>>>>>> aa9c804 (add modified git ignore file)
-data/
+

@@ -1,0 +1,66 @@
+
+{
+    "queries":[
+        {"query":[
+                {
+                "$match" :
+                                {"_id":"10030955"}
+                                
+                },
+                { "$project": { "_id" : 1, "name": 1, "summary" : 1, "description" : 1, "neighborhood_overview" : 1, "property_type" : 1, "room_type" : 1, "bed_type" : 1, "minimum_nights" : 1, "maximum_nights" : 1, "cancellation_policy" : 1, "accommodates": 1, "bedrooms" : 1, "beds" : 1, "number_of_reviews" : 1, "bathrooms" : 1, "price" : 1, "security_deposit" : 1, "cleaning_fee" : 1, "extra_people" : 1, "guests_included": 1} }
+        ]},
+        {"query":[
+                {
+                "$match" : {
+                                "$or" : [
+                                        {"property_type":"House"}
+                                ]
+                }
+
+                },
+                { "$project": { "_id" : 1, "name": 1, "summary" : 1, "description" : 1, "neighborhood_overview" : 1, "property_type" : 1, "room_type" : 1, "bed_type" : 1, "minimum_nights" : 1, "maximum_nights" : 1, "cancellation_policy" : 1, "accommodates": 1, "bedrooms" : 1, "beds" : 1, "number_of_reviews" : 1, "bathrooms" : 1, "price" : 1, "security_deposit" : 1, "cleaning_fee" : 1, "extra_people" : 1, "guests_included": 1} }
+        ]},
+        {"query":[
+                {"$match" : {
+                        "name": {"$regex":"Beach"} 
+                              
+                }},
+                { "$project": {"_id" : 1, "name": 1, "summary" : 1, "description" : 1, "neighborhood_overview" : 1, "property_type" : 1, "room_type" : 1, "bed_type" : 1, "minimum_nights" : 1, "maximum_nights" : 1, "cancellation_policy" : 1, "accommodates": 1, "bedrooms" : 1, "beds" : 1, "number_of_reviews" : 1, "bathrooms" : 1, "price" : 1, "security_deposit" : 1, "cleaning_fee" : 1, "extra_people" : 1, "guests_included": 1} }
+        ] },
+        {"query":[
+                {"$match" : {
+                                "$or" : [
+                                        {"name": {"$regex":"Beach"} },
+                                        {"property_type":"House"}
+                                ]
+                }},
+                { "$project": {"_id" : 1, "name": 1, "summary" : 1, "description" : 1, "neighborhood_overview" : 1, "property_type" : 1, "room_type" : 1, "bed_type" : 1, "minimum_nights" : 1, "maximum_nights" : 1, "cancellation_policy" : 1, "accommodates": 1, "bedrooms" : 1, "beds" : 1, "number_of_reviews" : 1, "bathrooms" : 1, "price" : 1, "security_deposit" : 1, "cleaning_fee" : 1, "extra_people" : 1, "guests_included": 1} }
+        ]},
+        {"query":[
+                {"$match" : {
+                        "bedrooms":3
+                              
+                }},
+                { "$project": {"_id" : 1, "name": 1, "summary" : 1, "description" : 1, "neighborhood_overview" : 1, "property_type" : 1, "room_type" : 1, "bed_type" : 1, "minimum_nights" : 1, "maximum_nights" : 1, "cancellation_policy" : 1, "accommodates": 1, "bedrooms" : 1, "beds" : 1, "number_of_reviews" : 1, "bathrooms" : 1, "price" : 1, "security_deposit" : 1, "cleaning_fee" : 1, "extra_people" : 1, "guests_included": 1} }
+        ] },
+        {"query":[
+                {"$match" : {
+                                "$or" : [
+                                        {"name": {"$regex":"Beach"} },
+                                        {"property_type":"House"},
+                                        {"bedrooms":3}
+                                ]
+                }},
+                { "$project": {"_id" : 1, "name": 1, "summary" : 1, "description" : 1, "neighborhood_overview" : 1, "property_type" : 1, "room_type" : 1, "bed_type" : 1, "minimum_nights" : 1, "maximum_nights" : 1, "cancellation_policy" : 1, "accommodates": 1, "bedrooms" : 1, "beds" : 1, "number_of_reviews" : 1, "bathrooms" : 1, "price" : 1, "security_deposit" : 1, "cleaning_fee" : 1, "extra_people" : 1, "guests_included": 1} }
+        ]},
+        {"query":[
+                {"$match" : {
+                                "$or" : [
+                                        {"minimum_nights":3}
+                                ]
+                }},
+                { "$project": {"_id" : 1, "name": 1, "summary" : 1, "description" : 1, "neighborhood_overview" : 1, "property_type" : 1, "room_type" : 1, "bed_type" : 1, "minimum_nights" : 1, "maximum_nights" : 1, "cancellation_policy" : 1, "accommodates": 1, "bedrooms" : 1, "beds" : 1, "number_of_reviews" : 1, "bathrooms" : 1, "price" : 1, "security_deposit" : 1, "cleaning_fee" : 1, "extra_people" : 1, "guests_included": 1} }
+        ]}
+
+        ]  
+}

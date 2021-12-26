@@ -19,9 +19,12 @@ MONGODATABASENAME='sample_airbnb'
 MONGODBCOLLECTIONNAME='listingsAndReviews'
 
 SQLITEDBFILE=r'G:\bits\sem2\Systems for data analytics\Assignment\data\airbnb_sqlite.db'
-SQLITETABLENAME='listingsAndReviews_sqlite'
-SQLITETABLECOLUMNS=["_id", "name", "summary", "description", "neighborhood_overview", "property_type", "room_type", "bed_type", "minimum_nights", "maximum_nights", "cancellation_policy", "accommodates",
-"bedrooms", "beds", "number_of_reviews", "bathrooms", "price", "security_deposit", "cleaning_fee", "extra_people", "guests_included"]
+SQLITETABLENAME='listingsAndReviews'
+SQLITETABLECOLUMNS=['queryId', 'query', 'insertTime', 'accessedTime', 'data']
+logFile=r'G:\bits\sem2\Systems for data analytics\Assignment\data\log\cache.log'
+# SQLITETABLENAME='listingsAndReviews_sqlite'
+# SQLITETABLECOLUMNS=["_id", "name", "summary", "description", "neighborhood_overview", "property_type", "room_type", "bed_type", "minimum_nights", "maximum_nights", "cancellation_policy", "accommodates",
+# "bedrooms", "beds", "number_of_reviews", "bathrooms", "price", "security_deposit", "cleaning_fee", "extra_people", "guests_included"]
 
 
 

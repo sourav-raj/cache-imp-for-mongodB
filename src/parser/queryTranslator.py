@@ -34,13 +34,13 @@ class QueryTranslator:
     def mongoDbToSqlQueryParser(self, query:dict):
         self.filter='where '
         self.selectedFields='*'
-        
+
         match=query[0]['$match']
-        try:
-            projection=query[1]['$project']
-            self.selectedFields = ', '.join([key  for (key, value) in projection.items() if value == 1])
-        except:
-            print(f'projection is not mentioned, will fetch all the fields')
+        # try:
+        #     projection=query[1]['$project']
+        #     self.selectedFields = ', '.join([key  for (key, value) in projection.items() if value == 1])
+        # except:
+        #     print(f'projection is not mentioned, will fetch all the fields')
     
         for key, values_ in match.items():
             if key in ['$or', '$and']:
